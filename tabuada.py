@@ -5,14 +5,17 @@
 
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __author__="Marlos Isganzella"
 
 numeros = list(range(1, 11))
 
-for numero in numeros:
-    print("Tabuada do: ", numero)
-    for i in numeros:        
-        print(i * numero)
-    print()
-    
+
+
+for n1 in numeros:
+    print("{:-^18}".format(f"Tabuada do {n1}"))
+    for n2 in numeros:
+        resultado = n1 * n2
+        print("{:^18}".format(f"{n1} x {n2} = {resultado}"))
+    print("#" * 18)
+        
