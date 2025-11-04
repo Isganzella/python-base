@@ -15,9 +15,9 @@ sala1 = ['Erik','Maria', 'Gustavo', 'Manuel', 'Sofia', 'Joana']
 sala2 = ['Joao', 'Antonio', 'Carlos', 'Maria','Isolda']
 
 
-aula_ingles = ["Erik",'Maia', 'Joana'. 'Carlos', 'Antonio']
-aula_musica = ['Erik', 'Sofia'. 'Maria']
-aula_danca = ['Gustavo'. 'Sofia'. 'Joana'. 'Antonio']
+aula_ingles = ["Erik",'Maia', 'Joana', 'Carlos', 'Antonio']
+aula_musica = ['Erik', 'Sofia', 'Maria']
+aula_danca = ['Gustavo', 'Sofia', 'Joana', 'Antonio']
 
 
 # Imprimir para cada atividada os alunos de cada atividade.

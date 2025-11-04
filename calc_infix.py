@@ -64,6 +64,7 @@ for num in nums:
 
 n1, n2 = validated_nums
 
+resultado = 0
 if operation == "sum":
     resultado = n1 + n2
 elif operation == "sub":
