@@ -29,6 +29,7 @@ __author__ = "Marlos Isganzella"
 
 import os
 import sys
+from datetime import datetime
 
 arguments = sys.argv[1:]
 
@@ -73,5 +74,12 @@ elif operation == 'mul':
     resultado = n1* n2
 elif operation == 'div':
     resultado  = n1 / n2
+
+path = os.curdir
+filepath = os.path.join(path, "infix.txt")
+timestamp = datetime.now().isoformat()
+
+with open(filepath, 'a') as file_:
+    file_.write(f"date={timestamp} - {operation} {n1} {n2} = {resultado}\n")
 
 print(resultado)
