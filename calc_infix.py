@@ -30,6 +30,16 @@ __author__ = "Marlos Isganzella"
 import os
 import sys
 from datetime import datetime
+import logging
+logging.basicConfig(
+    filename="app.log",
+    encoding="utf-8",
+    filemode="a",
+    format="{asctime} - {levelname} - {message}",
+    style="{",
+    datefmt="%Y-%m-%d %H:%M",
+)
+
 
 arguments = sys.argv[1:]
 
@@ -49,6 +59,7 @@ valid_operations = ("sum", "sub", "mul", "div")
 
 if operation not in valid_operations:
     print("Operacao Invalida")
+    logging.error("Operacao Invalida")
     print(valid_operations)
     sys.exit(1)
 
@@ -56,6 +67,7 @@ validated_nums = []
 for num in nums:
     if not num.replace(".", "").isdigit():
         print(f"Numero invalido {num}")
+        logging.error("Número inválido")
         sys.exit(2)
     if "." in num:
         num = float(num)
@@ -75,11 +87,15 @@ elif operation == 'mul':
 elif operation == 'div':
     resultado  = n1 / n2
 
-path = os.curdir
-filepath = os.path.join(path, "infix.txt")
-timestamp = datetime.now().isoformat()
 
-with open(filepath, 'a') as file_:
-    file_.write(f"date={timestamp} - {operation} {n1} {n2} = {resultado}\n")
+
+
+
+# path = os.curdir
+# filepath = os.path.join(path, "infix.txt")
+# timestamp = datetime.now().isoformat()
+
+# with open(filepath, 'a') as file_:
+#     file_.write(f"date={timestamp} - {operation} {n1} {n2} = {resultado}\n")
 
 print(resultado)
